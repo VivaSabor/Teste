@@ -1286,7 +1286,7 @@
                                 <ul class="space-y-3 mb-8 min-h-[320px]">
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>Receitas personalizadas ilimitadas baseadas nas suas restrições alimentares</span>
+                                        <span>Receitas personalizadas</span>
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
@@ -1302,11 +1302,11 @@
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>Suporte por e-mail em horário comercial</span>
+                                        <span>Atendimento especializado</span>
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>1 consulta grátis com nutricionista especializada</span>
+                                        <span>1 consulta grátis com nutricionista</span>
                                     </li>
                                 </ul>
                                 <button onclick="selectPlan('Básico', 69.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
@@ -1333,11 +1333,11 @@
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>Desconto de 10% em todas as compras da NutriBox</span>
+                                        <span>Desconto de 10% em todas as compras</span>
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>4 consultas mensais com nutricionistas especializados</span>
+                                        <span>4 consultas mensais com nutricionistas</span>
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
@@ -1345,11 +1345,7 @@
                                     </li>
                                     <li class="flex items-start text-gray-700">
                                         <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>Suporte prioritário 24h por telefone e chat</span>
-                                    </li>
-                                    <li class="flex items-start text-gray-700">
-                                        <span class="text-green-500 mr-3 mt-1">✓</span>
-                                        <span>Frete grátis em todas as entregas da NutriBox</span>
+                                        <span>Suporte prioritário 24h</span>
                                     </li>
                                 </ul>
                                 <button onclick="selectPlan('Premium', 149.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
@@ -2615,27 +2611,27 @@
             
             let deliveryHours;
             if (cepDiff <= 100) {
-                deliveryHours = 1.5; // 1h30min minimum
+                deliveryHours = 20; // 1h30min minimum
             } else if (cepDiff <= 500) {
-                deliveryHours = 3;
+                deliveryHours = 40;
             } else if (cepDiff <= 1000) {
-                deliveryHours = 6;
+                deliveryHours = 1.0;
             } else if (cepDiff <= 5000) {
-                deliveryHours = 12;
+                deliveryHours = 1.5;
             } else {
-                deliveryHours = 24; // 1 day maximum
+                deliveryHours = 2; // 1 day maximum
             }
             
-            if (deliveryHours < 2) {
-                return '1h30min - 2h';
-            } else if (deliveryHours <= 4) {
-                return '2-4 horas';
-            } else if (deliveryHours <= 8) {
-                return '4-8 horas';
-            } else if (deliveryHours <= 12) {
-                return '8-12 horas';
+            if (deliveryHours < 20) {
+                return '1min-20min';
+            } else if (deliveryHours <= 40) {
+                return '21-40min';
+            } else if (deliveryHours <= 1.0) {
+                return '41min-1h0min';
+            } else if (deliveryHours <= 1.5) {
+                return '1h1min-1h30min';
             } else {
-                return '12-24 horas';
+                return '1h31min-2 horas';
             }
         }
         
