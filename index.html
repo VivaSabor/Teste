@@ -561,7 +561,7 @@
                         <div class="card-elegant rounded-2xl p-8 slide-up">
                             <div class="flex items-center justify-between mb-6">
                                 <h3 class="text-xl font-bold text-gradient">Refeições</h3>
-                                <span class="text-3xl floating">🍽️</span>
+                                <span class="text-3xl">🍽️</span>
                             </div>
                             <div class="text-4xl font-bold text-gray-800 mb-3 meals-count">0/6</div>
                             <p class="text-gray-600 font-medium mb-4">Refeições realizadas hoje</p>
@@ -699,22 +699,6 @@
                         </div>
                     </div>
                     
-                    <!-- Dica do Dia -->
-                    <div class="card-elegant rounded-2xl p-8 mb-8">
-                        <h3 class="text-2xl font-bold text-gradient mb-6">💡 Dica do Dia</h3>
-                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
-                                    <span class="text-2xl">🌟</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-yellow-800 mb-2">Dica Nutricional</h4>
-                                    <p id="daily-tip" class="text-yellow-700 leading-relaxed">Beba água regularmente ao longo do dia. A hidratação adequada é fundamental para o bom funcionamento do organismo.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <!-- Envie sua Mensagem -->
                     <div class="card-elegant rounded-2xl p-8 mb-8">
                         <h3 class="text-2xl font-bold text-gradient mb-6">✉️ Envie sua Pergunta/Mensagem</h3>
@@ -750,7 +734,23 @@
                             </button>
                         </form>
                     </div>
-                    
+
+                    <!-- Dica do Dia -->
+                    <div class="card-elegant rounded-2xl p-8 mb-8">
+                        <h3 class="text-2xl font-bold text-gradient mb-6">💡 Dica do Dia</h3>
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                                    <span class="text-2xl">🌟</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-yellow-800 mb-2">Dica Nutricional</h4>
+                                    <p id="daily-tip" class="text-yellow-700 leading-relaxed">Beba água regularmente ao longo do dia. A hidratação adequada é fundamental para o bom funcionamento do organismo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Contato Section -->
                     <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <!-- Fale Conosco -->
@@ -919,7 +919,7 @@
                                 <!-- Fruit Selection (Hidden by default) -->
                                 <div id="fruit-selection" class="hidden mb-8">
                                     <h3 class="text-lg font-semibold text-gray-800 mb-4">Preferências de Frutas para Sobremesas</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Selecione as frutas que você NÃO quer ou NÃO pode comer:</p>
+                                    <p class="text-sm text-gray-600 mb-4">Indique as frutas que prefere não consumir:</p>
                                     
                                     <div class="grid md:grid-cols-3 gap-6">
                                         <!-- Frutas Cítricas -->
@@ -1277,7 +1277,7 @@
                             <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-green-300 transition-colors bg-white">
                                 <div class="text-center mb-6">
                                     <h3 class="text-2xl font-bold text-gray-800 mb-2">Plano Básico</h3>
-                                    <div class="text-4xl font-bold text-green-600 mb-2">R$ 19,90</div>
+                                    <div class="text-4xl font-bold text-green-600 mb-2">R$ 69,90</div>
                                     <p class="text-gray-600">por mês</p>
                                     <div class="mt-2 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold">
                                         7 DIAS GRÁTIS
@@ -1309,7 +1309,7 @@
                                         <span>1 consulta grátis com nutricionista especializada</span>
                                     </li>
                                 </ul>
-                                <button onclick="selectPlan('Básico', 19.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
+                                <button onclick="selectPlan('Básico', 69.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
                                     Escolher Básico
                                 </button>
                             </div>
@@ -1319,11 +1319,11 @@
                         <div class="w-full flex-shrink-0 px-4">
                             <div class="border-2 border-green-500 rounded-2xl p-8 relative bg-gradient-to-br from-green-50 to-blue-50">
                                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                    <span class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold">MAIS POPULAR</span>
+                                    <span class="bg-green-500 text-gold px-4 py-1 rounded-full text-sm font-bold">MAIS POPULAR</span>
                                 </div>
                                 <div class="text-center mb-6">
                                     <h3 class="text-2xl font-bold text-gray-800 mb-2">Plano Premium</h3>
-                                    <div class="text-4xl font-bold text-green-600 mb-2">R$ 29,90</div>
+                                    <div class="text-4xl font-bold text-green-600 mb-2">R$ 149,90</div>
                                     <p class="text-gray-600">por mês</p>
                                 </div>
                                 <ul class="space-y-3 mb-8 min-h-[320px]">
@@ -1352,7 +1352,7 @@
                                         <span>Frete grátis em todas as entregas da NutriBox</span>
                                     </li>
                                 </ul>
-                                <button onclick="selectPlan('Premium', 29.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
+                                <button onclick="selectPlan('Premium', 149.90)" class="w-full btn-primary py-3 rounded-xl font-bold shadow-lg">
                                     Escolher Premium
                                 </button>
                             </div>
