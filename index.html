@@ -2519,7 +2519,7 @@
             let shippingCost = cep ? 15.00 : 0;
             
             if (currentUser && currentUser.plan === 'Premium') {
-                document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFized(2)}`;
+                document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFixed(2)}`;
             } else {
                 document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFixed(2)}`;
             }
