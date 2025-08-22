@@ -1164,28 +1164,6 @@
                                     Agendar
                                 </button>
                             </div>
-                            
-                            <div class="bg-white rounded-xl shadow-md p-6 text-center">
-                                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #fef3c7;">
-                                    <span class="text-2xl">🧠</span>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Psicólogo</h3>
-                                <p class="text-gray-600 text-sm mb-4">Apoio emocional especializado</p>
-                                <button onclick="scheduleAppointment('Psicólogo')" class="w-full text-white py-2 rounded-lg font-semibold hover:opacity-90 transition-colors" style="background: linear-gradient(135deg, #608041 0%, #cb8b32 100%);">
-                                    Agendar
-                                </button>
-                            </div>
-                            
-                            <div class="bg-white rounded-xl shadow-md p-6 text-center">
-                                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #fce7f3;">
-                                    <span class="text-2xl">🏃‍♀️</span>
-                                </div>
-                                <h3 class="text-lg font-bold text-gray-800 mb-2">Terapeuta</h3>
-                                <p class="text-gray-600 text-sm mb-4">Terapia especializada</p>
-                                <button onclick="scheduleAppointment('Terapeuta')" class="w-full text-white py-2 rounded-lg font-semibold hover:opacity-90 transition-colors" style="background: linear-gradient(135deg, #608041 0%, #cb8b32 100%);">
-                                    Agendar
-                                </button>
-                            </div>
                         </div>
                         
                         <div class="bg-white rounded-xl shadow-md p-6">
@@ -1264,7 +1242,7 @@
                 <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 gradient-primary">
                     <span class="text-white text-3xl">⭐</span>
                 </div>
-                <h2 class="text-4xl font-bold text-gradient mb-4">Venha fazer parte da Viva Sabor!</h2>
+                <h2 class="text-4xl font-bold text-gradient mb-4"></h2>
                 <p class="text-gray-600 text-lg">Escolha o seu plano e desbloqueie todos os recursos</p>
             </div>
             
@@ -2542,7 +2520,7 @@
             
             if (currentUser && currentUser.plan === 'Premium') {
                 shippingCost = 0;
-                document.getElementById('shipping-cost').textContent = 'Grátis';
+                document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFized(2)}`;
             } else {
                 document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFixed(2)}`;
             }
