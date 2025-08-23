@@ -2521,7 +2521,7 @@
             
             if (currentUser && currentUser.plan === 'Premium') {
                 shippingCost = 0;
-                document.getElementById('shipping-cost').textContent = 'Grátis';
+                document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFixed(2)}`;
             } else {
                 document.getElementById('shipping-cost').textContent = `R$ ${shippingCost.toFixed(2)}`;
             }
